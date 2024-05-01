@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 152px 20px 0;
+}
+
+.header {
+    background-color: white;
+    height: 150px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0.5rem 0 1rem #333333;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 15px;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.img-logo {
+    width: 150px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+
+}
+
+.nav-menu-item {
+    font-family: "Barlow", sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0 50px;
+    /*text-transform: uppercase;*/
+    width: max-content;
+}
+
+.nav-menu-link {
+    text-decoration: none;
+    color: #333333;
+}
+
+.nav-toggle {
+    color: #333333;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+/*Inicio animación Menú li*/
+.navMenu {
+    flex: 1 0 40%;
+}
+
+.navMenu i {
+    font-size: 0;
+}
+
+.navMenu li {
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.navMenu li:hover {
+    transform: scale(1.2);
+}
+
+.navMenu li::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-color: #333333;
+    transform: scaleX(0);
+    transition: all 0.2s ease;
+}
+
+.navMenu li:hover::before {
+    transform: scaleX(1);
+}
+/*Fin animación Menú li*/
+
+/* Mobile Version */
+@media (max-width: 768px) {
+    body {
+        padding-top: 65px;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .img-logo {
+        width: 90px;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-color: #333333;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-link {
+        color: white;
+    }
+
+    .nav-menu-item {
+        line-height: 40px;
+        margin:10px 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+    .navMenu li::before {
+        background-color: white;
+    }
+}
