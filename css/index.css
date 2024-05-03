@@ -107,6 +107,10 @@ body {
     scroll-margin-top: 21ex;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .main-home {
     height: 700px;
     width: 100%;
