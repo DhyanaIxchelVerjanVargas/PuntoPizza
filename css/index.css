@@ -18,6 +18,7 @@ body {
     top: 0;
     left: 0;
     box-shadow: 0.5rem 0 1rem #333333;
+    z-index: 30;
 }
 
 .nav {
@@ -62,6 +63,7 @@ body {
     line-height: 60px;
     cursor: pointer;
     display: none;
+    z-index: 100;
 }
 
 /*Inicio animación Menú li*/
@@ -97,7 +99,68 @@ body {
 .navMenu li:hover::before {
     transform: scaleX(1);
 }
-/*Fin animación Menú li*/
+/* Fin animación Menú li*/
+
+/* Inicio Main */
+.item {
+    /*Esto es para que al darle click en los enlaces dentro de la página me respete el espacio de el header y el lugar al que quiero ir*/
+    scroll-margin-top: 21ex;
+}
+
+.main-home {
+    height: 700px;
+    width: 100%;
+    background-image: url("../src/img/mainpp.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 800px;
+    position: relative;
+}
+
+.main-home-chart {
+    background-color:rgba(142, 173, 66, 60%);
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 30%;
+    right: 60px;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 70px 35px 10px;
+}
+
+.main-home-chart h1 {
+    font-size: 50px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 650;
+}
+.main-home-chart button {
+    font-size: 25px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    background-color: #CF2200;
+    width: 200px;
+    height: 55px;
+}
+
+.home-button {
+    padding-left: 47%;
+    padding-top: 13%;
+}
+
+.main-middle {
+   height: 300px;
+}
+
+.main-menu {
+    height: 400px;
+    width: 100%;
+    background-image: url("../src/img/oscuro.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    margin-bottom: 10px;
+}
+
+/* Fin Main */
 
 /* Footer */
 .footer {
@@ -132,6 +195,11 @@ body {
     font-size: 20px;
 }
 
+.footer-contact a {
+    color: #333333;
+    text-decoration: none;
+}
+
 .col-sec div{
     padding: 10px;
     display: flex;
@@ -160,13 +228,14 @@ body {
 
 .footer-rights hr {
     border: dashed 2px #CF2200;
+    z-index: 0;
 }
 /* Fin footer */
 
 /* Mobile Version */
 @media (max-width: 768px) {
     body {
-        padding-top: 65px;
+        padding-top: 62px;
     }
 
     .header {
@@ -223,6 +292,41 @@ body {
     .navMenu li::before {
         background-color: white;
     }
+
+    /* Inicio Main */
+    .main-home {
+        height: 350px;
+        background-size: 100% 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static;
+    }
+
+    .main-home-chart {
+        width: 300px;
+        height: 200px;
+        position: static;
+        padding: 20px 0 0 15px;
+    }
+
+    .main-home-chart h1 {
+        font-size: 32px;
+        font-weight: 650;
+    }
+    .main-home-chart button {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .home-button {
+        padding: 10px 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Fin Main */
 
     /* Footer */
     
