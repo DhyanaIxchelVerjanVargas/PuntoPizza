@@ -4,7 +4,10 @@
 }
 
 body {
-    padding: 152px 20px 0;
+    padding: 152px 0 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header {
@@ -96,6 +99,70 @@ body {
 }
 /*Fin animación Menú li*/
 
+/* Footer */
+.footer {
+    padding: 1em 0;
+    text-align: center;
+    margin-top: auto;
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+    border-top: #8EAD42 1px solid;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.footer-contact img {
+    width: 140px;
+    align-items: center;
+}
+
+.footer-contact p {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.footer-contact i {
+    color: #333333;
+    font-size: 20px;
+}
+
+.col-sec div{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.col-third div{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;  
+}
+
+.footer-map {
+    padding-top: 30px;
+}
+
+.footer-rights {
+    margin: 0  70px;
+}
+
+.footer-rights p {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer-rights hr {
+    border: dashed 2px #CF2200;
+}
+/* Fin footer */
+
 /* Mobile Version */
 @media (max-width: 768px) {
     body {
@@ -156,4 +223,51 @@ body {
     .navMenu li::before {
         background-color: white;
     }
+
+    /* Footer */
+    
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .footer-contact img {
+        width: 110px;
+        margin-bottom: 20px;
+    }
+
+    .footer-contact p {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .col-sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-third {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-sec div {
+        width: 270px;
+    }
+
+    .col-third div {
+        width: 270px;
+    }
+
+    .footer-rights {
+        margin: 0 20px;
+    }
+
+    .footer-rights p {
+        font-size: 10px;
+    }
+    /* Fin footer */
 }
