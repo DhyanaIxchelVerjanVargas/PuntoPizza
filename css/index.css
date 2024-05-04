@@ -10,97 +10,6 @@ body {
     min-height: 100vh;
 }
 
-.header {
-    background-color: white;
-    height: 150px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0.5rem 0 1rem #333333;
-    z-index: 30;
-}
-
-.nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0 15px;
-    max-width: 992px;
-    margin: 0 auto;
-}
-
-.img-logo {
-    width: 150px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-
-}
-
-.nav-menu-item {
-    font-family: "Barlow", sans-serif;
-    font-size: 23px;
-    font-weight: 700;
-    margin: 0 50px;
-    /*text-transform: uppercase;*/
-    width: max-content;
-}
-
-.nav-menu-link {
-    text-decoration: none;
-    color: #333333;
-}
-
-.nav-toggle {
-    color: #333333;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 0 20px;
-    line-height: 60px;
-    cursor: pointer;
-    display: none;
-    z-index: 100;
-}
-
-/*Inicio animación Menú li*/
-.navMenu {
-    flex: 1 0 40%;
-}
-
-.navMenu i {
-    font-size: 0;
-}
-
-.navMenu li {
-    transition: all 0.2s ease;
-    position: relative;
-}
-
-.navMenu li:hover {
-    transform: scale(1.2);
-}
-
-.navMenu li::before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: "";
-    height: 2px;
-    background-color: #333333;
-    transform: scaleX(0);
-    transition: all 0.2s ease;
-}
-
-.navMenu li:hover::before {
-    transform: scaleX(1);
-}
-/* Fin animación Menú li*/
-
 /* Inicio Main */
 .item {
     /*Esto es para que al darle click en los enlaces dentro de la página me respete el espacio de el header y el lugar al que quiero ir*/
@@ -152,7 +61,7 @@ html {
 }
 
 .main-middle {
-   height: 300px;
+   height: 220px;
 }
 
 .main-menu {
@@ -164,139 +73,58 @@ html {
     margin-bottom: 10px;
 }
 
+/* Middle */
+.main-middle-chart {
+    width: 400px;
+    height: 290px;
+    background-color:rgba(223, 206, 175, 50%);
+    border-radius: 10px;
+    position: relative;
+    top: 12%;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 57px;
+}
+
+.main-middle-chart p {
+    font-size: 16px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+}
+
+.middle-icons i{
+    font-size: 40px;
+    padding: 10px;
+}
+.cel {
+    color: #333333;;
+}
+
+.wat {
+    color: #25D366;
+}
+
+.main-middle-chart button {
+    font-size: 25px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    background-color: #8EAD42;
+    border-color: #8EAD42 ;
+    width: 200px;
+    height: 55px;
+}
+
 /* Fin Main */
 
-/* Footer */
-.footer {
-    padding: 1em 0;
-    text-align: center;
-    margin-top: auto;
-    font-family: "Montserrat", sans-serif;
-    color: #333333;
-    border-top: #8EAD42 1px solid;
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 15px;
-}
-
-.footer-contact img {
-    width: 140px;
-    align-items: center;
-}
-
-.footer-contact p {
-    text-align: left;
-    padding-left: 10px;
-    font-size: 16px;
-}
-
-.footer-contact i {
-    color: #333333;
-    font-size: 20px;
-}
-
-.footer-contact a {
-    color: #333333;
-    text-decoration: none;
-}
-
-.col-sec div{
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.col-third div{
-    padding: 10px;
-    display: flex;
-    flex-direction: row;  
-}
-
-.footer-map {
-    padding-top: 30px;
-}
-
-.footer-rights {
-    margin: 0  70px;
-}
-
-.footer-rights p {
-    text-align: left;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.footer-rights hr {
-    border: dashed 2px #CF2200;
-    z-index: 0;
-}
-/* Fin footer */
+/* */
 
 /* Mobile Version */
 @media (max-width: 768px) {
     body {
         padding-top: 62px;
     }
-
-    .header {
-        height: 60px;
-    }
-
-    .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0;
-    }
-
-    .img-logo {
-        width: 90px;
-        margin-left: 25px;
-        margin-top: 10px;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        background-color: #333333;
-        position: fixed;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        padding: 20px 0;
-
-        height: calc(100% - 60px);
-        overflow-y: auto;
-
-        left: 100%;
-        transition: left 0.3s;
-    }
-
-    .nav-menu-link {
-        color: white;
-    }
-
-    .nav-menu-item {
-        line-height: 40px;
-        margin:10px 0;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-menu_visible {
-        left: 0;
-    }
-    .navMenu li::before {
-        background-color: white;
-    }
-
     /* Inicio Main */
     .main-home {
         height: 350px;
@@ -329,53 +157,23 @@ html {
         justify-content: center;
         align-items: center;
     }
+    /* Middle */
+    .main-middle {
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
 
+    .main-middle-chart {
+        width: 300px;
+        height: 350px;
+        position: relative;
+        top: 8%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     /* Fin Main */
-
-    /* Footer */
-    
-    .footer-contact {
-        display: flex;
-        flex-direction: column;
-        padding-top: 0;
-    }
-
-    .footer-contact img {
-        width: 110px;
-        margin-bottom: 20px;
-    }
-
-    .footer-contact p {
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .col-sec {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .col-third {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .col-sec div {
-        width: 270px;
-    }
-
-    .col-third div {
-        width: 270px;
-    }
-
-    .footer-rights {
-        margin: 0 20px;
-    }
-
-    .footer-rights p {
-        font-size: 10px;
-    }
-    /* Fin footer */
 }
